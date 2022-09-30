@@ -1,0 +1,70 @@
+{% load embed_video_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CSS only -->
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSEhAVFRUVFQ8VFxcVFRUVFRcVFRUWFhUVFRUYHiggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGhAQGi0lICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIALQBGQMBIgACEQEDEQH/xAAbAAADAQEBAQEAAAAAAAAAAAAAAQIDBAUGB//EADUQAAIBAQUGBQMDAwUAAAAAAAABAhEDITFBUQRhcYGR8BITobHRUsHhImLxMkKSBRSCstL/xAAaAQADAQEBAQAAAAAAAAAAAAAAAQIDBAUH/8QAJBEBAQACAgIDAAEFAAAAAAAAAAECEQMxIUESUWEyBCJScbH/2gAMAwEAAhEDEQA/AP0L0+2bRFpgX/GmN7TJfe6uTPk8e7GNk71xNpq9nOdFprqkzTPteXaS4kFxM6mmbswN2Rl0zyCQw3AQgIoQpMCKTHgCRLYGBsBDM0ilfwFTIe4CCvKAUmNKZMeAorMFeJRpCY2yWIgy4qiqKEcylfeVBRFZszk6lWksgs45h+CfaoRGMBkRz7Y8ML28bzoOTbHelfg8NSsO18f8mEcsNMaV3lLn9LePJEN1zxWmayQ1fpetaUobV0VpDflVOqwXE085ax6MytFclR1kq45rDHqZ+fPtIUl9I+Py8tu+uTbF31ybYY96+zoLvXckzMMZ4m0X+lbqoztCrF3NczW+cdrvRlRJKiZ1NUdBznRHXgZ5dMsgNIEMhBMlDd4NgZSYISQ2wBFK4UVmUtRijDiUkJIY0hsiKqDvHJ5CMpOowSExAVFFVAvC7MZh33Dm6BgjPEZQRjU2FFUGOQrQAAMgedbyrJvhnyO23nRNnnL8GnHPbfhns+Fbr1nRd0KwTbwTqrsX8EwjXTPOnPgE533VoqxfP5NdNfeixbvTdVKtWnfikbeCP0+v5Js1Slcrr1gh+WvqRnll57K08efr8MT79ldqD7+UkJ978lcsySKffIizdGjTvtGTRpj5ml49abNDiKtUn3cCM6lZvZ4IwNrF3Gd6ZZ9NCZMbYkiGYwJG2CAwwSEVTIYNX8BjoA0gmTyHJiiswM8CUgd4yaA2SxhCIzOKpeVFZiV94WkshkmcqlwiTZxzNAgv0AACkgAMdotaIDk3dOfbLWrpkvc5+t/uJsqUvCt7w3LXidOOOpp2SamoVrKlY14vh/aOyhnRYdN7JsoZ36pfc2SrcvYWeWvEFuppcI11o1fyOnwis4UGcuV25sstuR95bk0J95VyQ33luTQu9OaNWxETRYmVLqqgsniufz3uKMoujNmPOeRe1I1sXiZRLs3eZWMsp4bIJMbZBkzhpA2DBIYPAqKFFZlAVAAJ33DIleE2OToTFCM0hDZLEBiW9ECu4spKhUgtEnQziqg3VmkVQOx0YABSQACk6CBTlQ863tKvcjbabXLN4nNhe+S1/BtxYe3TxYa8hvwqrxyX3e4mEK3sqMb6vE0jGtyNMsteI1t0Io6rKzpxHZWVOJZy5Zb6c2ee/EAVAKE6Q4+/i/QXfTNPiPvWmnIXeuH5NnQQB3qAzZyRpB3cPYlomLoX3FdxtEszRaMqzrepSIsvYpmd7ZX6CRSv4C3FpCTaAAGMibBXAkTJiMsSmCQt4gGOCzFFVKV/AqA4rMm0kVORNnEPwT7VCJQANIAAGAzm2i2pxy+R7RbUOR6vH2Kwx35vTbjw91PG9vL7vcCjm72M2srBvG5GuWba5aRZwbwOuzs0ioqmAznyytc+WewFAAlAFQYVAOJ954ZMX250p9qlPuu7JpbxPv8Ag2dJMQ2LvqMyIkixNFS6OCzZrFmBrFhnBlG1m7zZXHOdFnfeYWMMlRQwATMCGDYBM2KKErymyTDJY2NXcWMzpkuZTdAiqGcnUZdhKrNRRVAQ4VpgAm6DIzHaLalyxIttp06nOlzbKmP21ww91L9SoQbwNrPZ9ehuloPLNWXJ9M7OxS3s1ADK3fbK20BUKABCgVAAAoAAAcffTJoXf3aZXelafcXem9pmjoSLvr9iu9McmLvr+CjIQxDNMkEGUQ0XPM0qfTeLNrCV9NTmhI1TMcpqs88XWBMJVRRm5wZydSpsUUKnDFvAFewAis2XFZiSrwRU5UHBU2kshwiTCOY7S0SzCD8ineDdDnltGi6mTbe8uRU477bz2jQwlJvG80hs7zuNoQSH0fyxx6c8NneLuOiEEsEU2Im5bTcrewFQCpKRQAAAAAAAAAAADK0t0t77zMP91LRevyXOPKrnHlWFlaU4HQu9+bqzntbJx+RWc6cDfLGZeY6bJfMdHfXJti765NjTr36PR0F3ruSZkzIQ33nyYu9RqITQwGaEbQkZSQRlQqz5Q7Nx12U6M3kzkizaDqYWOfLH2pIphgQ7RLMiTae1PQdMupj59MFeR5r1KmNV8K7G0loc0rdMy8uTyfP8msNm1ZfxGsce6mdu+HAmFm3kdULFadTUqQrySdRzQ2bU3jBLBFCbH4jO5WkxMGKhllQAACTAVAAAoAAAAGU9ois68Pk5rTaW8Llu+S8ePKrx48q6rS1Sxd+mZzWm0N7l3iYj/jA2xwmLfHjkC/LostxXmPVi66K8vwbo/wCQ7Z7VbPbm2Xa/D+mV8fb5R0Wuz5xvXeGp5xrs21OF2MdNN6N8+K/yx7/60z473i0VpT8nRC2T478zoTUlVUaedE/cylY/sT4VXszmuWOXizVY/OXuE5LXtZNEtrXtfkvy1nBrqN2EdH1F/bE7jJtaiclqa+THR9Q8qP0+rHvE/lGHjRMpnUrNfQvUtQeUF/ihzPGH85HFC2eSNo+Zkn0N34tac0gi9ZLq2K5zuQrlvqF5Mnj6upS2bVlxaWZtG8zl30xueUZx2dfyX4UsEUxJDv0z3b2IoMQbGkEnojABFANiDeKpnlTIAAgwAHJbbfBYfqe7DqVjhll1FY43Lp1k2lole2lxPMnt05XK7hj1ZCsq3ydWbz+n1/Ktpwf5V2T25f2qu93IxnaSli+SuXTPmSgLmOM6jSYYzqAAGhqCHT0397g/nHHu8Fy7yJI1yuXGpPh49C1+XRYb0Pznq/QW76Lz6ecIYHa6TsLeVm6rB4rL+T17C2jNVXNZrieM0RCbg6p0feJny8M5J+s+Timfmdvddno2iatf3PnUz2Ta1O7CWmvD4Oho4MvlhdZOS7l1klT/AH+46/u9xShol6/JKb+j3DvotT0r/l7k0WvoXT9vuFH9PowLaKLf6Eumj6/g1o9F0Qr9V1X2A9phP9vuzeLen2MZJ/V6tii0s68g17gs26sRtmMJrI1heE/O2VmlRQwE3kV4kSBO8TlkiZS0JuUORVRN7yGxGdqtL8SJlaUvwRM5JKrwPL2i3c3RYZL7s04uO538a8fF8lbXtblcsPVmULKuJpZ2VMcTQ7NzGaxdUsxmsSjGmAwAhIABgAAD6fIiHTvMrhndhihJ8bt2Y6UywWubzRNI2uOiq8NzNPAtI/5Mzw0uXGtSfL49GTUuAAA73WCZxqUAGwTPT2P/AFCv6Z45S/8AXyedaIgeeGPJNUs8JnPL6QTR5Gx7c4XO+Oma4fB69nNSVYuq7xPN5eDLj/04eTjywvlHkreRKaWKlxuNwMpn9p+X2wVpHeHjWnr+Cp2Ce7gZuykt/ozSXG9KnxqvM/avUl2j0XSpFdbuNwylfGDzpLP2XsaQta53mZLiO6p6ld0bbqW7uJ56tGsTeytjPLCxllx66dDu4kCUqjMqkClJJVeA2zzre1do7v6V6mnHx/O/i8MPlUW1q7R6Jd9SoQSGlQZ178anTp9agAAEQABgAH8gAiC5DXPV0Q/vdhig+9yq/cRGlrxdXigWWGuvJiu3XumtN6K+91yxRNKnHnm3RYaB5r1fRDpxvuTb6pl+BfSupNs9ptnt5IAB6DsAAABM8DEALxVAa2FvKDrF/D4gBVmzsl8V9Dik9yJADxuWayeRiAADJRNEOxWV3AAHLZ0ctjni72tK+iHHvkAHRW1Eb2JRq0ABsF42jojNgAckmhnIy/1B3RWUneYJABtJrGaVx/whgAAo2IAEDQ2vZMYCpJqNP0AB06vw/wDWvMiu5YABOPlMOMn0Rqob3dGvMAJz8JyThS5f0mIAVgrF/9k=');
+            font-family: 'Arial', sans-serif;
+            color: black;
+        }
+    </style>
+    <title>Videos</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="collapse navbar-collapse id=navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active bold fw-bolder">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item active bold">
+                    <a href="cocktails" class="nav-link">Cocktails</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="recipes" class="nav-link">Recipes</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="videos" class="nav-link">Videos</a>
+                </li>
+                <li class="nav-md-3 text-end">
+                        <a type="button" href="login" class="btn btn-outline-primary me-2">Login</a>
+                        <a type="button" href="register" class="btn btn-primary">Sign-up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+      <div class="container">
+          <h2 class="text-center">Videos</h2>
+        <br/>
+          <div class="row">
+              {% for cocktail in cocktails %}
+                    <div class="col">
+                        <div class="px-3 mb-3">
+                             {% video cocktail.video '300x300' %}
+                        </div>
+                        <div class="text-xl-center fw-bolder">
+                            {{ cocktail.name }}
+                        </div>
+                    </div>
+              {% endfor %}
+          </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE>
+<html>
+<head>
+    <!-- CSS only -->
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/free-vector/gradient-wavy-background_23-2149123391.jpg?w=2000');
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+    <title>Cocktails</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="collapse navbar-collapse id=navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active bold fw-bolder">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item active bold">
+                    <a href="cocktails" class="nav-link">Cocktails</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="recipes" class="nav-link">Recipes</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="videos" class="nav-link">Videos</a>
+                </li>
+                <li class="nav-md-3 text-end">
+                        <a type="button" href="login" class="btn btn-outline-primary me-2">Login</a>
+                        <a type="button" href="register" class="btn btn-primary">Sign-up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="text-center">All Cocktails</h2>
+    <a type="button" href="/admin" class="btn btn-primary">Add new cocktail</a>
+
+      <div class="row">
+          {% for cocktail in cocktails %}
+                <div class="col">
+                    <img src="{{ cocktail.image }}" height="300" width="300">
+                    <br/>
+                    <div class="text-center">
+                        {{ cocktail.name }}
+                    </div>
+                    {{ cocktail.description }}
+                </div>
+          {% endfor %}
+      </div>
+    </div>
+</body>
+
+
+</html>
+
+
+
